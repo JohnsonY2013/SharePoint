@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\3-Personal\MyProjects\GitHub\SPServices\SharePointService2016\SPService2016\bin\Release\PublishOutput</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>05/05/2017 09:59:26</publishTime>
+    </File>
+    <File Include="bin/SPService2016.dll">
+      <publishTime>05/16/2018 19:43:04</publishTime>
+    </File>
+    <File Include="bin/SPService2016.pdb">
+      <publishTime>05/16/2018 19:43:04</publishTime>
+    </File>
+    <File Include="bin/SPServiceContract.dll">
+      <publishTime>05/16/2018 19:16:36</publishTime>
+    </File>
+    <File Include="bin/SPServiceContract.pdb">
+      <publishTime>05/16/2018 19:16:36</publishTime>
+    </File>
+    <File Include="bin/SPServiceModel.dll">
+      <publishTime>05/16/2018 19:16:36</publishTime>
+    </File>
+    <File Include="bin/SPServiceModel.pdb">
+      <publishTime>05/16/2018 19:16:36</publishTime>
+    </File>
+    <File Include="SSOMSite.svc">
+      <publishTime>05/16/2018 17:11:42</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/16/2018 19:35:18</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
