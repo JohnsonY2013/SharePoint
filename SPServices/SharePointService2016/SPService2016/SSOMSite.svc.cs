@@ -55,8 +55,8 @@ namespace SPService2016
         {
             var wrapper = new SSOMSharePoint();
             wrapper.StartTimeUTC = DateTime.UtcNow;
-            wrapper.URL = System.Web.HttpContext.Current.Request.Url.ToString();
-            var userName = System.Web.HttpContext.Current.User.Identity.Name;
+            wrapper.URL = System.Web.HttpContext.Current != null ? System.Web.HttpContext.Current.Request.Url.ToString() : "";
+            var userName = System.Web.HttpContext.Current != null ? System.Web.HttpContext.Current.User.Identity.Name : "";
             if (!string.IsNullOrEmpty(userName))
             {
                 wrapper.UserName = userName.Substring(userName.IndexOf('\\') + 1);

@@ -50,6 +50,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnCopy = new System.Windows.Forms.Button();
+            this.chbJSON = new System.Windows.Forms.CheckBox();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.panelMain.SuspendLayout();
@@ -136,7 +137,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.splitContainer1.Size = new System.Drawing.Size(750, 371);
-            this.splitContainer1.SplitterDistance = 299;
+            this.splitContainer1.SplitterDistance = 274;
             this.splitContainer1.TabIndex = 2;
             // 
             // tabControlMain
@@ -147,7 +148,7 @@
             this.tabControlMain.Location = new System.Drawing.Point(0, 0);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(750, 299);
+            this.tabControlMain.Size = new System.Drawing.Size(750, 274);
             this.tabControlMain.TabIndex = 1;
             // 
             // tabPageSite
@@ -156,7 +157,7 @@
             this.tabPageSite.Location = new System.Drawing.Point(4, 22);
             this.tabPageSite.Name = "tabPageSite";
             this.tabPageSite.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSite.Size = new System.Drawing.Size(742, 273);
+            this.tabPageSite.Size = new System.Drawing.Size(742, 248);
             this.tabPageSite.TabIndex = 0;
             this.tabPageSite.Text = "Site";
             this.tabPageSite.UseVisualStyleBackColor = true;
@@ -172,7 +173,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(736, 267);
+            this.groupBox1.Size = new System.Drawing.Size(736, 242);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -247,27 +248,30 @@
             // 
             // txtBoxResult
             // 
+            this.txtBoxResult.BackColor = System.Drawing.Color.White;
             this.txtBoxResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtBoxResult.Location = new System.Drawing.Point(1, 0);
             this.txtBoxResult.Multiline = true;
             this.txtBoxResult.Name = "txtBoxResult";
-            this.txtBoxResult.Size = new System.Drawing.Size(647, 68);
+            this.txtBoxResult.ReadOnly = true;
+            this.txtBoxResult.Size = new System.Drawing.Size(647, 93);
             this.txtBoxResult.TabIndex = 3;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.chbJSON);
             this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.btnCopy);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(648, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(101, 68);
+            this.panel1.Size = new System.Drawing.Size(101, 93);
             this.panel1.TabIndex = 2;
             // 
             // btnClear
             // 
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Location = new System.Drawing.Point(14, 38);
+            this.btnClear.Location = new System.Drawing.Point(14, 62);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 1;
@@ -278,13 +282,23 @@
             // btnCopy
             // 
             this.btnCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCopy.Location = new System.Drawing.Point(14, 8);
+            this.btnCopy.Location = new System.Drawing.Point(14, 33);
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.Size = new System.Drawing.Size(75, 23);
             this.btnCopy.TabIndex = 0;
             this.btnCopy.Text = "Copy";
             this.btnCopy.UseVisualStyleBackColor = true;
             this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
+            // 
+            // chbJSON
+            // 
+            this.chbJSON.AutoSize = true;
+            this.chbJSON.Location = new System.Drawing.Point(14, 10);
+            this.chbJSON.Name = "chbJSON";
+            this.chbJSON.Size = new System.Drawing.Size(89, 17);
+            this.chbJSON.TabIndex = 2;
+            this.chbJSON.Text = "JSON Format";
+            this.chbJSON.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -313,6 +327,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,6 +356,7 @@
         private System.Windows.Forms.Button btnCopy;
         private System.Windows.Forms.TextBox txtBoxResult;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar;
+        private System.Windows.Forms.CheckBox chbJSON;
     }
 }
 

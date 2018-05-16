@@ -19,10 +19,13 @@ namespace SPServiceClient
             try
             {
                 var webClient = new WebClient();
-                //webClient.Headers.Add("Content-Type", "application/json");
-                //webClient.Headers.Add("Accept", "application/json");
-                //webClient.Headers["Content-type"] = "application/json";
-                //webClient.Headers["Accept"] = "application/json";
+                if (chbJSON.Checked)
+                {
+                    //webClient.Headers.Add("Content-Type", "application/json");
+                    //webClient.Headers.Add("Accept", "application/json");
+                    webClient.Headers["Content-type"] = "application/json";
+                    webClient.Headers["Accept"] = "application/json";
+                }
                 //webClient.Encoding = Encoding.UTF8;
                 webClient.Credentials = Configuration.Credential;
                 using (var reader = new StreamReader(webClient.OpenRead(Configuration.SiteServiceAddress + "/GetCentralAdminUrl")))
@@ -55,10 +58,13 @@ namespace SPServiceClient
         private void btnGetSiteLock_Click(object sender, EventArgs e)
         {
             var webClient = new WebClient();
-            //webClient.Headers.Add("Content-Type", "application/json");
-            //webClient.Headers.Add("Accept", "application/json");
-            //webClient.Headers["Content-type"] = "application/json";
-            //webClient.Headers["Accept"] = "application/json";
+            if (chbJSON.Checked)
+            {
+                //webClient.Headers.Add("Content-Type", "application/json");
+                //webClient.Headers.Add("Accept", "application/json");
+                webClient.Headers["Content-type"] = "application/json";
+                webClient.Headers["Accept"] = "application/json";
+            }
             //webClient.Encoding = Encoding.UTF8;
             webClient.Credentials = Configuration.Credential;
             using (var reader = new StreamReader(webClient.OpenRead(Configuration.SiteServiceAddress + "/GetMock")))
